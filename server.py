@@ -14,10 +14,9 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-import bcrypt
+#import bcrypt
 import concurrent.futures
 import MySQLdb
-import markdown
 import os.path
 import re
 import subprocess
@@ -35,7 +34,7 @@ from tornado.options import define, options
 define("port", default=8080, help="run on the given port", type=int)
 define("mysql_host", default="127.0.0.1:3306", help="chef database host")
 define("mysql_database", default="chef", help="chef database name")
-define("mysql_user", default="ubuntu", help="chef database user")
+define("mysql_user", default="root", help="chef database user")
 define("mysql_password", default="chef2015L", help="chef database password")
 
 
@@ -70,7 +69,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class HomeHandler(BaseHandler):
     def get(self):
-        return "Something"
+        self.write("Something")
 
 class EntryModule(tornado.web.UIModule):
     def render(self, entry):
