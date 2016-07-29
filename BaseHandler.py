@@ -28,7 +28,6 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import unicodedata
-import BaseHandler
 
 from tornado.options import define, options
 
@@ -42,42 +41,7 @@ define("mysql_password", default="chef2015L", help="chef database password")
 # A thread pool to be used for password hashing with bcrypt.
 executor = concurrent.futures.ThreadPoolExecutor(2)
 
-class Application(tornado.web.Application):
-    def __init__(self):
-        handlers = [
-            (r"/", HomeHandler),
-        ]
-        settings = dict(
-            blog_title=u"Tornado Blog",
-            template_path=os.path.join(os.path.dirname(__file__), "templates"),
-            static_path=os.path.join(os.path.dirname(__file__), "static"),
-            ui_modules={"Entry": EntryModule},
-            xsrf_cookies=True,
-            cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
-            login_url="/auth/login",
-            debug=True,
-        )
-        super(Application, self).__init__(handlers, **settings)
-        # Have one global connection to the blog DB across all handlers
-        self.db = torndb.Connection(
-            host=options.mysql_host, database=options.mysql_database,
-            user=options.mysql_user, password=options.mysql_password)
-
-class HomeHandler(BaseHandler):
-    def get(self):
-        self.write("Something")
-
-class EntryModule(tornado.web.UIModule):
-    def render(self, entry):
-        return self.render_string("modules/entry.html", entry=entry)
-
-
-def main():
-    tornado.options.parse_command_line()
-    http_server = tornado.httpserver.HTTPServer(Application())
-    http_server.listen(options.port)
-    tornado.ioloop.IOLoop.current().start()
-
-
-if __name__ == "__main__":
-    main()
+class BaseHandler(tornado.web.RequestHandler):
+    @property
+    def db(self):
+        return self.application.db
