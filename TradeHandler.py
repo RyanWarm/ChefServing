@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#encoding=utf-8
 #
 # Copyright 2009 Facebook
 #
@@ -28,20 +29,21 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import unicodedata
-import BaseHandler
+from BaseHandler import BaseHandler
+from datetime import datetime
 
 from tornado.options import define, options
-
-define("port", default=8080, help="run on the given port", type=int)
-define("mysql_host", default="127.0.0.1:3306", help="chef database host")
-define("mysql_database", default="chef", help="chef database name")
-define("mysql_user", default="root", help="chef database user")
-define("mysql_password", default="chef2015L", help="chef database password")
 
 class TradeHandler(BaseHandler):
     def get(self):
         trade = self.db.get("SELECT * FROM trades ORDER BY deliver_time DESC LIMIT 1")
         result = {}
         for key in trade:
+            #result[key.encode('utf-8')] = str(trade[key.encode('utf-8')]).encode('utf-8')
+            if isinstance(trade[key], datetime):
+                result[key] = trade[key].strftime("%Y-%m-%d %H:%M:%S")
+                continue
             result[key] = trade[key]
+
+        result['test'] = 'HelloWorld'
         self.write(result)

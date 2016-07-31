@@ -28,16 +28,18 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import unicodedata
-import BaseHandler
+from BaseHandler import BaseHandler
+from TradeHandler import TradeHandler
 
 from tornado.options import define, options
 
+"""
 define("port", default=8080, help="run on the given port", type=int)
 define("mysql_host", default="127.0.0.1:3306", help="chef database host")
 define("mysql_database", default="chef", help="chef database name")
 define("mysql_user", default="root", help="chef database user")
 define("mysql_password", default="chef2015L", help="chef database password")
-
+"""
 
 # A thread pool to be used for password hashing with bcrypt.
 executor = concurrent.futures.ThreadPoolExecutor(2)
@@ -46,6 +48,7 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", HomeHandler),
+            (r"/trades", TradeHandler),
         ]
         settings = dict(
             blog_title=u"Tornado Blog",
