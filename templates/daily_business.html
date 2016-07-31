@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block body %}
+    选择日期：<input type="text" style="width: 210px;" name="filter_deliver_time" value=""><p>
     <table class="uk-table uk-table-hover uk-table-condensed sortable">
     <caption><font color="red" size="4">2016年6月30日营业数据</font></caption>
         <thead>
@@ -210,4 +211,28 @@
             </tr>
         </tbody>
     </table>
+{% end %}
+
+{% block bottom %}
+    <script type="text/javascript">
+    $(function() {
+        $('input[name="filter_deliver_time"]').daterangepicker({
+        autoUpdateInput: false,
+            timePicker: true,
+            timePickerIncrement: 10,
+            locale: {
+            autoApply: true,
+            separator: ' ~ ',
+                format: 'YYYY-MM-DD H:mm'
+            }
+        });
+    });
+      $('input[name="filter_deliver_time"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('YYYY-MM-DD H:mm') + ' ~ ' + picker.endDate.format('YYYY-MM-DD H:mm'));
+      });
+
+      $('input[name="filter_deliver_time"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+</script>
 {% end %}
