@@ -46,4 +46,5 @@ class TradeHandler(BaseHandler):
             result[key] = trade[key]
 
         result['test'] = 'HelloWorld'
-        self.write(result)
+        #self.write(result)
+        self.render("daily_business.html")
