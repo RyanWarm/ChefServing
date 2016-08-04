@@ -44,7 +44,7 @@
 			<td>微信转账</td>
 			<td>
 				{% if ("1" == mode) %}
-					<input type="text" style="width: 60px;" name="weixin_0_num" value="{{ trade.weixin_0_num if (trade and trade.weixin_0_num) else 0 }}"/>
+					<input type="text" style="width: 60px; height: 25px;" name="weixin_0_num" value="{{ trade.weixin_0_num if (trade and trade.weixin_0_num) else 0 }}"/>
 				{% else %}
 					{{ trade.weixin_0_num if (trade and trade.weixin_0_num) else 0 }}
 				{% end %}
