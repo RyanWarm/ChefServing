@@ -1,238 +1,269 @@
 {% extends "base.html" %}
 
 {% block body %}
-    选择日期：<input type="text" style="width: 210px;" name="filter_deliver_time" value=""><p>
-    <table class="uk-table uk-table-hover uk-table-condensed sortable">
-    <caption><font color="red" size="4">2016年6月30日营业数据</font></caption>
-        <thead>
-            <tr>
-                <th style="font-weight:bold">项目</th>
-                <th style="font-weight:bold">类别</th>
-                <th style="font-weight:bold">支付方式</th>
-                <th style="font-weight:bold">订单数</th>
-                <th style="font-weight:bold">订单金额</th>
-                <th style="font-weight:bold">优惠合计</th>
-                <th style="font-weight:bold">实收金额</th>
-                <th style="font-weight:bold">客单价</th>
-                <th style="font-weight:bold">备注</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <td colspan="5" align="center" style="font-weight:bold;font-style:normal"><font color="red" size="3">净利润</font></td>
-                <td></td>
-                <td style="font-weight:bold;font-style:normal"><font color="red" size="3">¥ 3333</font></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td rowspan="12" class="uk-table-middle">收入</td>
-                <td rowspan="3" class="uk-table-middle">早餐</td>
-                <td>有赞平台</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>微信转账</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>现金</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="middle">小计</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td rowspan="3" class="uk-table-middle">午餐</td>
-                <td>有赞平台</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>微信转账</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>现金</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="middle">小计</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td rowspan="3" class="uk-table-middle">晚餐</td>
-                <td>有赞平台</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>微信转账</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>现金</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="middle">小计</td>
-                <td>12</td>
-                <td>¥12</td>
-                <td>¥-12</td>
-                <td>¥12</td>
-                <td>¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="3" align="middle" style="font-weight:bold">6月30日收入总合计</td>
-                <td style="font-weight:bold">12</td>
-                <td style="font-weight:bold">¥12</td>
-                <td style="font-weight:bold">¥-12</td>
-                <td style="font-weight:bold">¥12</td>
-                <td style="font-weight:bold">¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="9" align="middle"></td>
-            </tr>
-            <tr>
-                <td rowspan="6" class="uk-table-middle">支出</td>
-                <td colspan="2" class="uk-table-middle" style="font-weight:bold">采购总支出</td>
-                <td colspan="3"></td>
-                <td>¥1200</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="8" align="middle"></td>
-            </tr>
-            <tr>
-                <td style="font-style:italic">项目</td>
-                <td style="font-style:italic">类别</td>
-                <td style="font-style:italic">数量</td>
-                <td style="font-style:italic">单价</td>
-                <td style="font-style:italic">工作时间</td>
-                <td></td>
-                <td></td>
-                <td rowspan="5" class="uk-table-middle">每日固定支出</td>
-            </tr>
-            <tr>
-                <td rowspan="3" class="uk-table-middle">运费支出</td>
-                <td>早餐(5:50-8:50)</td>
-                <td>12</td>
-                <td>¥25</td>
-                <td>3</td>
-                <td>¥300</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>午餐(11:00-14:00)</td>
-                <td>12</td>
-                <td>¥25</td>
-                <td>3</td>
-                <td>¥300</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>晚餐(17:00-21:00)</td>
-                <td>12</td>
-                <td>¥25</td>
-                <td>3</td>
-                <td>¥300</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="3" align="middle" style="font-weight:bold">6月30日支出总合计</td>
-                <td style="font-weight:bold"></td>
-                <td style="font-weight:bold"></td>
-                <td style="font-weight:bold"></td>
-                <td style="font-weight:bold">¥12</td>
-                <td style="font-weight:bold">¥12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="8" align="middle"></td>
-            </tr>
-        </tbody>
-    </table>
+    选择日期：<input type="text" style="width: 110px; height: 30px;" name="date_selector" value="">
+		<button class="uk-button-primary" onclick="change_date()">查询</button><p>
+    <form class="uk-form" method="post" id="form">
+	    <table class="uk-table uk-table-hover uk-table-condensed sortable">
+	    <caption><font color="red" size="4">{{ date }}营业数据</font> (当天数据晚八点自动更新)</caption>
+		<thead>
+		    <tr>
+			<th style="font-weight:bold">项目</th>
+			<th style="font-weight:bold">类别</th>
+			<th style="font-weight:bold">支付方式</th>
+			<th style="font-weight:bold">订单数</th>
+			<th style="font-weight:bold">订单金额</th>
+			<th style="font-weight:bold">优惠合计</th>
+			<th style="font-weight:bold">实收金额</th>
+			<th style="font-weight:bold">客单价</th>
+			<th style="font-weight:bold">备注</th>
+		    </tr>
+		</thead>
+		<tfoot>
+		    <tr>
+			<td colspan="5" align="center" style="font-weight:bold;font-style:normal"><font color="red" size="3">净利润</font></td>
+			<td></td>
+			<td style="font-weight:bold;font-style:normal"><font color="red" size="3">¥ {{ trade.profit if (trade and trade.profit) else 0 }}</font></td>
+			<td></td>
+			<td></td>
+		    </tr>
+		</tfoot>
+		<tbody>
+		    <tr>
+			<td rowspan="12" class="uk-table-middle">收入</td>
+			<td rowspan="3" class="uk-table-middle">早餐</td>
+			<td>有赞平台</td>
+			<td>{{ trade.youzan_0_num if (trade and trade.youzan_0_num) else 0 }}</td>
+			<td>¥{{ trade.youzan_0_sum if (trade and trade.youzan_0_sum) else 0 }}</td>
+			<td>¥-{{ trade.youzan_0_discount if (trade and trade.youzan_0_discount) else 0 }}</td>
+			<td>¥{{ trade.youzan_0_payment if (trade and trade.youzan_0_payment) else 0 }}</td>
+			<td>¥{{ trade.youzan_0_average if (trade and trade.youzan_0_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>微信转账</td>
+			<td>
+				{% if ("1" == mode) %}
+					<input type="text" style="width: 60px;" name="weixin_0_num" value="{{ trade.weixin_0_num if (trade and trade.weixin_0_num) else 0 }}"/>
+				{% else %}
+					{{ trade.weixin_0_num if (trade and trade.weixin_0_num) else 0 }}
+				{% end %}
+			</td>
+			<td>¥{{ trade.weixin_0_sum if (trade and trade.weixin_0_sum) else 0 }}</td>
+			<td>¥-{{ trade.weixin_0_discount if (trade and trade.weixin_0_discount) else 0 }}</td>
+			<td>¥{{ trade.weixin_0_payment if (trade and trade.weixin_0_payment) else 0 }}</td>
+			<td>¥{{ trade.weixin_0_average if (trade and trade.weixin_0_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>现金</td>
+			<td>{{ trade.cash_0_num if (trade and trade.cash_0_num) else 0 }}</td>
+			<td>¥{{ trade.cash_0_sum if (trade and trade.cash_0_sum) else 0 }}</td>
+			<td>¥-{{ trade.cash_0_discount if (trade and trade.cash_0_discount) else 0 }}</td>
+			<td>¥{{ trade.cash_0_payment if (trade and trade.cash_0_payment) else 0 }}</td>
+			<td>¥{{ trade.cash_0_average if (trade and trade.cash_0_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="2" align="middle">小计</td>
+			<td>{{ trade.total_0_num if (trade and trade.total_0_num) else 0 }}</td>
+			<td>¥{{ trade.total_0_sum if (trade and trade.total_0_sum) else 0 }}</td>
+			<td>¥-{{ trade.total_0_discount if (trade and trade.total_0_discount) else 0 }}</td>
+			<td>¥{{ trade.total_0_payment if (trade and trade.total_0_payment) else 0 }}</td>
+			<td>¥{{ trade.total_0_average if (trade and trade.total_0_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td rowspan="3" class="uk-table-middle">午餐</td>
+			<td>有赞平台</td>
+			<td>{{ trade.youzan_1_num if (trade and trade.youzan_1_num) else 0 }}</td>
+			<td>¥{{ trade.youzan_1_sum if (trade and trade.youzan_1_sum) else 0 }}</td>
+			<td>¥-{{ trade.youzan_1_discount if (trade and trade.youzan_1_discount) else 0 }}</td>
+			<td>¥{{ trade.youzan_1_payment if (trade and trade.youzan_1_payment) else 0 }}</td>
+			<td>¥{{ trade.youzan_1_average if (trade and trade.youzan_1_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>微信转账</td>
+			<td>{{ trade.weixin_1_num if (trade and trade.weixin_1_num) else 0 }}</td>
+			<td>¥{{ trade.weixin_1_sum if (trade and trade.weixin_1_sum) else 0 }}</td>
+			<td>¥-{{ trade.weixin_1_discount if (trade and trade.weixin_1_discount) else 0 }}</td>
+			<td>¥{{ trade.weixin_1_payment if (trade and trade.weixin_1_payment) else 0 }}</td>
+			<td>¥{{ trade.weixin_1_average if (trade and trade.weixin_1_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>现金</td>
+			<td>{{ trade.cash_1_num if (trade and trade.cash_1_num) else 0 }}</td>
+			<td>¥{{ trade.cash_1_sum if (trade and trade.cash_1_sum) else 0 }}</td>
+			<td>¥-{{ trade.cash_1_discount if (trade and trade.cash_1_discount) else 0 }}</td>
+			<td>¥{{ trade.cash_1_payment if (trade and trade.cash_1_payment) else 0 }}</td>
+			<td>¥{{ trade.cash_1_average if (trade and trade.cash_1_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="2" align="middle">小计</td>
+			<td>{{ trade.total_1_num if (trade and trade.total_1_num) else 0 }}</td>
+			<td>¥{{ trade.total_1_sum if (trade and trade.total_1_sum) else 0 }}</td>
+			<td>¥-{{ trade.total_1_discount if (trade and trade.total_1_discount) else 0 }}</td>
+			<td>¥{{ trade.total_1_payment if (trade and trade.total_1_payment) else 0 }}</td>
+			<td>¥{{ trade.total_1_average if (trade and trade.total_1_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td rowspan="3" class="uk-table-middle">晚餐</td>
+			<td>有赞平台</td>
+			<td>{{ trade.youzan_2_num if (trade and trade.youzan_2_num) else 0 }}</td>
+			<td>¥{{ trade.youzan_2_sum if (trade and trade.youzan_2_sum) else 0 }}</td>
+			<td>¥-{{ trade.youzan_2_discount if (trade and trade.youzan_2_discount) else 0 }}</td>
+			<td>¥{{ trade.youzan_2_payment if (trade and trade.youzan_2_payment) else 0 }}</td>
+			<td>¥{{ trade.youzan_2_average if (trade and trade.youzan_2_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>微信转账</td>
+			<td>{{ trade.weixin_2_num if (trade and trade.weixin_2_num) else 0 }}</td>
+			<td>¥{{ trade.weixin_2_sum if (trade and trade.weixin_2_sum) else 0 }}</td>
+			<td>¥-{{ trade.weixin_2_discount if (trade and trade.weixin_2_discount) else 0 }}</td>
+			<td>¥{{ trade.weixin_2_payment if (trade and trade.weixin_2_payment) else 0 }}</td>
+			<td>¥{{ trade.weixin_2_average if (trade and trade.weixin_2_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>现金</td>
+			<td>{{ trade.cash_2_num if (trade and trade.cash_2_num) else 0 }}</td>
+			<td>¥{{ trade.cash_2_sum if (trade and trade.cash_2_sum) else 0 }}</td>
+			<td>¥-{{ trade.cash_2_discount if (trade and trade.cash_2_discount) else 0 }}</td>
+			<td>¥{{ trade.cash_2_payment if (trade and trade.cash_2_payment) else 0 }}</td>
+			<td>¥{{ trade.cash_2_average if (trade and trade.cash_2_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="2" align="middle">小计</td>
+			<td>{{ trade.total_2_num if (trade and trade.total_2_num) else 0 }}</td>
+			<td>¥{{ trade.total_2_sum if (trade and trade.total_2_sum) else 0 }}</td>
+			<td>¥-{{ trade.total_2_discount if (trade and trade.total_2_discount) else 0 }}</td>
+			<td>¥{{ trade.total_2_payment if (trade and trade.total_2_payment) else 0 }}</td>
+			<td>¥{{ trade.total_2_average if (trade and trade.total_2_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="3" align="middle" style="font-weight:bold">{{ month }}月{{ day }}日收入总合计</td>
+			<td style="font-weight:bold">{{ trade.daily_in_num if (trade and trade.daily_in_num) else 0 }}</td>
+			<td style="font-weight:bold">¥{{ trade.daily_in_sum if (trade and trade.daily_in_sum) else 0 }}</td>
+			<td style="font-weight:bold">¥-{{ trade.daily_in_discount if (trade and trade.daily_in_discount) else 0 }}</td>
+			<td style="font-weight:bold">¥{{ trade.daily_in_payment if (trade and trade.daily_in_payment) else 0 }}</td>
+			<td style="font-weight:bold">¥{{ trade.daily_in_average if (trade and trade.daily_in_average) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="9" align="middle"></td>
+		    </tr>
+		    <tr>
+			<td rowspan="6" class="uk-table-middle">支出</td>
+			<td colspan="2" class="uk-table-middle" style="font-weight:bold">采购总支出</td>
+			<td colspan="3"></td>
+			<td>¥{{ trade.materials if (trade and trade.materials) else 0 }}</td>
+			<td></td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="8" align="middle"></td>
+		    </tr>
+		    <tr>
+			<td style="font-style:italic">项目</td>
+			<td style="font-style:italic">类别</td>
+			<td style="font-style:italic">数量</td>
+			<td style="font-style:italic">单价</td>
+			<td style="font-style:italic">工作时间</td>
+			<td style="font-style:italic">小计</td>
+			<td></td>
+			<td rowspan="5" class="uk-table-middle">每日固定支出</td>
+		    </tr>
+		    <tr>
+			<td rowspan="3" class="uk-table-middle">运费支出</td>
+			<td>早餐(5:50-8:50)</td>
+			<td>{{ trade.deliver_0_num if (trade and trade.deliver_0_num) else 0 }}</td>
+			<td>¥{{ trade.deliver_0_single if (trade and trade.deliver_0_single) else 0 }}</td>
+			<td>{{ trade.deliver_0_time if (trade and trade.deliver_0_time) else 0 }}</td>
+			<td>¥{{ trade.deliver_0_total if (trade and trade.deliver_0_total) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>午餐(11:00-14:00)</td>
+			<td>{{ trade.deliver_1_num if (trade and trade.deliver_1_num) else 0 }}</td>
+			<td>¥{{ trade.deliver_1_single if (trade and trade.deliver_1_single) else 0 }}</td>
+			<td>{{ trade.deliver_1_time if (trade and trade.deliver_1_time) else 0 }}</td>
+			<td>¥{{ trade.deliver_1_total if (trade and trade.deliver_1_total) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td>晚餐(17:00-21:00)</td>
+			<td>{{ trade.deliver_2_num if (trade and trade.deliver_2_num) else 0 }}</td>
+			<td>¥{{ trade.deliver_2_single if (trade and trade.deliver_2_single) else 0 }}</td>
+			<td>{{ trade.deliver_2_time if (trade and trade.deliver_2_time) else 0 }}</td>
+			<td>¥{{ trade.deliver_2_total if (trade and trade.deliver_2_total) else 0 }}</td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="3" align="middle" style="font-weight:bold">{{ month }}月{{ day }}日支出总合计</td>
+			<td style="font-weight:bold"></td>
+			<td style="font-weight:bold"></td>
+			<td style="font-weight:bold"></td>
+			<td style="font-weight:bold">¥{{ trade.out_total if (trade and trade.out_total) else 0 }}</td>
+			<td></td>
+			<td></td>
+		    </tr>
+		    <tr>
+			<td colspan="8" align="middle"></td>
+		    </tr>
+		</tbody>
+	    </table>
+    </form>
+    {% if (0 == mode) %}
+	<button class="uk-button-primary" onclick="open_edit_mode();">修改</button>
+    {% else %}
+	<button class="uk-button-primary" onclick="submit_edit();">提交</button>
+    {% end %}
 {% end %}
 
 {% block bottom %}
     <script type="text/javascript">
     $(function() {
-        $('input[name="filter_deliver_time"]').daterangepicker({
-        autoUpdateInput: false,
-            timePicker: true,
-            timePickerIncrement: 10,
-            locale: {
-            autoApply: true,
-            separator: ' ~ ',
-                format: 'YYYY-MM-DD H:mm'
-            }
+        //$('input[name="date_selector"]').daterangepicker({
+        $('input[name="date_selector"]').datepicker({
+            todayHighlight: true,
+            format: 'yyyy-mm-dd',
+            initialDate: new Date(),
+            timePickerIncrement: 10
         });
     });
-      $('input[name="filter_deliver_time"]').on('apply.daterangepicker', function(ev, picker) {
+/**
+      $('input[name="date_selector"]').on('apply.daterangepicker', function(ev, picker) {
           $(this).val(picker.startDate.format('YYYY-MM-DD H:mm') + ' ~ ' + picker.endDate.format('YYYY-MM-DD H:mm'));
       });
 
-      $('input[name="filter_deliver_time"]').on('cancel.daterangepicker', function(ev, picker) {
+      $('input[name="date_selector"]').on('cancel.daterangepicker', function(ev, picker) {
           $(this).val('');
       });
-</script>
+*/
+    </script>
+    <script type="text/javascript">
+	window.change_date = function() {
+		var query_date = $('input[name="date_selector"]').val();
+		var url = "/trades?date=" + query_date;
+		document.location.href = url;
+	};
+	
+	window.open_edit_mode = function () {
+		var url = "/trades?date={{ date }}&mode=1";
+		document.location.href = url;
+	};
+
+	function submit_edit() {
+		var query_date = $('input[name=\'date_selector\']').attr('value');
+		var url = "http://120.92.10.42:8080/trades?date=" + query_date;
+		document.getElementById("report_frame").src = url;
+	}
+    </script>
 {% end %}
