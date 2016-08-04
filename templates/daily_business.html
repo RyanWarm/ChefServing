@@ -163,7 +163,13 @@
 			<td rowspan="6" class="uk-table-middle">支出</td>
 			<td colspan="2" class="uk-table-middle" style="font-weight:bold">采购总支出</td>
 			<td colspan="3"></td>
-			<td>¥{{ trade.materials if (trade and trade.materials) else 0 }}</td>
+            <td>¥
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="materials" value="{{ trade.materials if (trade and trade.materials) else 0 }}"/>
+                {% else %}
+                    {{ trade.materials if (trade and trade.materials) else 0 }}
+                {% end %}
+            </td>
 			<td></td>
 			<td></td>
 		    </tr>
@@ -183,26 +189,80 @@
 		    <tr>
 			<td rowspan="3" class="uk-table-middle">运费支出</td>
 			<td>早餐(5:50-8:50)</td>
-			<td>{{ trade.deliver_0_num if (trade and trade.deliver_0_num) else 0 }}</td>
-			<td>¥{{ trade.deliver_0_single if (trade and trade.deliver_0_single) else 0 }}</td>
-			<td>{{ trade.deliver_0_time if (trade and trade.deliver_0_time) else 0 }}</td>
-			<td>¥{{ trade.deliver_0_total if (trade and trade.deliver_0_total) else 0 }}</td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_0_num" value="{{ trade.deliver_0_num if (trade and trade.deliver_0_num) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_0_num if (trade and trade.deliver_0_num) else 0 }}
+                {% end %}
+            </td>
+            <td>¥
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_0_single" value="{{ trade.deliver_0_single if (trade and trade.deliver_0_single) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_0_single if (trade and trade.deliver_0_single) else 0 }}
+                {% end %}
+            </td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_0_time" value="{{ trade.deliver_0_time if (trade and trade.deliver_0_time) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_0_time if (trade and trade.deliver_0_time) else 0 }}
+                {% end %}
+            </td>
+            <td>¥{{ trade.deliver_0_total if (trade and trade.deliver_0_total) else 0 }}</td>
 			<td></td>
 		    </tr>
 		    <tr>
 			<td>午餐(11:00-14:00)</td>
-			<td>{{ trade.deliver_1_num if (trade and trade.deliver_1_num) else 0 }}</td>
-			<td>¥{{ trade.deliver_1_single if (trade and trade.deliver_1_single) else 0 }}</td>
-			<td>{{ trade.deliver_1_time if (trade and trade.deliver_1_time) else 0 }}</td>
-			<td>¥{{ trade.deliver_1_total if (trade and trade.deliver_1_total) else 0 }}</td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_1_num" value="{{ trade.deliver_1_num if (trade and trade.deliver_1_num) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_1_num if (trade and trade.deliver_1_num) else 0 }}
+                {% end %}
+            </td>
+            <td>¥
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_1_single" value="{{ trade.deliver_1_single if (trade and trade.deliver_1_single) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_1_single if (trade and trade.deliver_1_single) else 0 }}
+                {% end %}
+            </td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_1_time" value="{{ trade.deliver_1_time if (trade and trade.deliver_1_time) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_1_time if (trade and trade.deliver_1_time) else 0 }}
+                {% end %}
+            </td>
+            <td>¥{{ trade.deliver_1_total if (trade and trade.deliver_1_total) else 0 }}</td>
 			<td></td>
 		    </tr>
 		    <tr>
 			<td>晚餐(17:00-21:00)</td>
-			<td>{{ trade.deliver_2_num if (trade and trade.deliver_2_num) else 0 }}</td>
-			<td>¥{{ trade.deliver_2_single if (trade and trade.deliver_2_single) else 0 }}</td>
-			<td>{{ trade.deliver_2_time if (trade and trade.deliver_2_time) else 0 }}</td>
-			<td>¥{{ trade.deliver_2_total if (trade and trade.deliver_2_total) else 0 }}</td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_2_num" value="{{ trade.deliver_2_num if (trade and trade.deliver_2_num) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_2_num if (trade and trade.deliver_2_num) else 0 }}
+                {% end %}
+            </td>
+            <td>¥
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_2_single" value="{{ trade.deliver_2_single if (trade and trade.deliver_2_single) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_2_single if (trade and trade.deliver_2_single) else 0 }}
+                {% end %}
+            </td>
+            <td>
+                {% if ("1" == mode) %}
+                    <input type="text" style="width: 60px; height: 25px;" name="deliver_2_time" value="{{ trade.deliver_2_time if (trade and trade.deliver_2_time) else 0 }}"/>
+                {% else %}
+                    {{ trade.deliver_2_time if (trade and trade.deliver_2_time) else 0 }}
+                {% end %}
+            </td>
+            <td>¥{{ trade.deliver_2_total if (trade and trade.deliver_2_total) else 0 }}</td>
 			<td></td>
 		    </tr>
 		    <tr>
@@ -261,9 +321,8 @@
 	};
 
 	function submit_edit() {
-		var query_date = $('input[name=\'date_selector\']').attr('value');
-		var url = "http://120.92.10.42:8080/trades?date=" + query_date;
-		document.getElementById("report_frame").src = url;
+        $('#form').attr('action', '/trades?date={{ date }}&mode=1');
+		$('#form').submit();
 	}
     </script>
 {% end %}
